@@ -1,4 +1,7 @@
 # sonarr-radarr-queue-cleaner
+
+This is a fork of [sonarr-radarr-queue-cleaner](https://github.com/MattDGTL/sonarr-radarr-queue-cleaner) by [MattDGTL](https://github.com/MattDGTL). The fork adds a GitHub Action to build a Docker image and push it to GitHub Packages. The Docker image is available at [ghcr.io/ben16w/sonarr-radarr-queue-cleaner](ghcr.io/ben16w/sonarr-radarr-queue-cleaner). The original README is below.
+
 A simple Sonarr and Radarr script to clean out stalled downloads.
 Couldn't find a python script to do this job so I figured why not give it a try.
 
