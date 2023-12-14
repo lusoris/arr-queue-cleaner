@@ -1,6 +1,34 @@
-# sonarr-radarr-queue-cleaner
+# Sonarr Radarr Queue Cleaner
 
-This is a fork of [sonarr-radarr-queue-cleaner](https://github.com/MattDGTL/sonarr-radarr-queue-cleaner) by [MattDGTL](https://github.com/MattDGTL). The fork adds a GitHub Action to build a Docker image and push it to GitHub Packages. The Docker image is available at [ghcr.io/ben16w/sonarr-radarr-queue-cleaner](ghcr.io/ben16w/sonarr-radarr-queue-cleaner). The original README is below.
+This is a fork of [sonarr-radarr-queue-cleaner](https://github.com/MattDGTL/sonarr-radarr-queue-cleaner) by [MattDGTL](https://github.com/MattDGTL). The fork adds a GitHub Action to build a Docker image and push it to GitHub Packages. The Docker image is available at [here](https://github.com/ben16w/sonarr-radarr-queue-cleaner/pkgs/container/sonarr-radarr-queue-cleaner). 
+
+Install the Docker image with the following command, replacing the environment variables with your own values:
+
+    docker run -d \
+        --name sonarr-radarr-queue-cleaner \
+        -e SONARR_API_KEY='123456' \
+        -e RADARR_API_KEY='123456' \
+        -e SONARR_URL='http://sonarr:8989' \
+        -e RADARR_URL='http://radarr:7878' \
+        -e API_TIMEOUT='3600' \
+        ghcr.io/ben16w/sonarr-radarr-queue-cleaner:latest
+
+You can also use the following `docker-compose.yml` file:
+
+    version: '3.7'
+    services:
+      sonarr-radarr-queue-cleaner:
+        image: ghcr.io/ben16w/sonarr-radarr-queue-cleaner:latest
+        container_name: sonarr-radarr-queue-cleaner
+        environment:
+          - SONARR_API_KEY=123456
+          - RADARR_API_KEY=123456
+          - SONARR_URL=http://sonarr:8989
+          - RADARR_URL=http://radarr:7878
+          - API_TIMEOUT=3600
+        restart: always
+
+## Original README
 
 A simple Sonarr and Radarr script to clean out stalled downloads.
 Couldn't find a python script to do this job so I figured why not give it a try.
