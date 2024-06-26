@@ -185,7 +185,7 @@ async def main():
             await remove_stalled_sonarr_downloads()
         else:
             logging.info('Sonarr queue script not active')
-        if WHSIPARR_RUN_SCRIPT==True:
+        if WHISPARR_RUN_SCRIPT==True:
             await remove_stalled_whisparr_downloads()
         else:
             logging.info('Whisparr queue script not active')
