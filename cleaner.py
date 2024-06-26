@@ -26,7 +26,7 @@ WHISPARR_RUN_SCRIPT = (os.environ['WHISPARR_RUN_SCRIPT'])
 # Lidarr, Radarr, Readarr, Sonarr and Whisparr API endpoints
 LIDARR_API_URL = (os.environ['LIDARR_URL']) + "/api/v1"
 RADARR_API_URL = (os.environ['RADARR_URL']) + "/api/v3"
-READARR_API_URL = (os.environ['READARR_URL']) + "/api/v3"
+READARR_API_URL = (os.environ['READARR_URL']) + "/api/v1"
 SONARR_API_URL = (os.environ['SONARR_URL']) + "/api/v3"
 WHISPARR_API_URL = (os.environ['WHISPARR_URL']) + "/api/v3"
 
