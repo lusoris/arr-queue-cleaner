@@ -53,5 +53,5 @@ You can also use the following `docker-compose.yml` file:
           - WHISPARR_URL='http://whisparr:7878'
           - WHISPARR_API_KEY=123456
           #GENERAL
-          - API_TIMEOUT=600
+          - API_TIMEOUT=3600
         restart: always
