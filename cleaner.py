@@ -169,23 +169,23 @@ async def count_records(API_URL, API_Key):
 async def main():
     while True:
         logging.info('Running media-tools script')
-        if LIDARR_RUN_SCRIPT=='True':
+        if LIDARR_RUN_SCRIPT.casefold()=='True':
             await remove_stalled_lidarr_downloads()
         else:
             logging.info('Lidarr queue script not active')
-        if RADARR_RUN_SCRIPT=='True':
+        if RADARR_RUN_SCRIPT.casefold()=='True':
             await remove_stalled_radarr_downloads()
         else:
             logging.info('Radarr queue script not active')
-        if READARR_RUN_SCRIPT=='True':
+        if READARR_RUN_SCRIPT.casefold()=='True':
             await remove_stalled_readarr_downloads()
         else:
             logging.info('Readarr queue script not active')
-        if SONARR_RUN_SCRIPT=='True':
+        if SONARR_RUN_SCRIPT.casefold()=='True':
             await remove_stalled_sonarr_downloads()
         else:
             logging.info('Sonarr queue script not active')
-        if WHISPARR_RUN_SCRIPT=='True':
+        if WHISPARR_RUN_SCRIPT.casefold()=='True':
             await remove_stalled_whisparr_downloads()
         else:
             logging.info('Whisparr queue script not active')
